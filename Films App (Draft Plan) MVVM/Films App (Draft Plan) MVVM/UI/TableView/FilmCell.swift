@@ -9,4 +9,10 @@ import UIKit
 
 class FilmCell: UICollectionViewCell {
     
+    @IBOutlet weak var filmImageView: UIImageView!
+    @IBOutlet weak var priceLabel: UILabel!
+    
+    
+    @IBAction func addToBasketButton(_ sender: Any) {
+    }
 }

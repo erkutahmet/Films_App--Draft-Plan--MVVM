@@ -9,6 +9,10 @@ import UIKit
 
 class DetailPage: UIViewController {
 
+    @IBOutlet weak var filmLabel: UILabel!
+    @IBOutlet weak var filmImageView: UIImageView!
+    @IBOutlet weak var priceLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

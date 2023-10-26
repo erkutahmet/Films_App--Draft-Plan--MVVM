@@ -9,6 +9,8 @@ import UIKit
 
 class HomePage: UIViewController {
 
+    @IBOutlet weak var filmsCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
