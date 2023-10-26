@@ -7,12 +7,19 @@
 
 import UIKit
 
+protocol CellProtocol {
+    func addToBasketClicked(indexPath: IndexPath)
+}
+
 class FilmCell: UICollectionViewCell {
     
     @IBOutlet weak var filmImageView: UIImageView!
     @IBOutlet weak var priceLabel: UILabel!
     
+    var cellProtocol: CellProtocol?
+    var indexPath: IndexPath?
     
     @IBAction func addToBasketButton(_ sender: Any) {
+        cellProtocol?.addToBasketClicked(indexPath: self.indexPath!)
     }
 }

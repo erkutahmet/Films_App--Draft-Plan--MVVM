@@ -10,10 +10,13 @@ import UIKit
 class HomePage: UIViewController {
 
     @IBOutlet weak var filmsCollectionView: UICollectionView!
+    
     var filmsList = [Films]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUI()
+        setData()
     }
     
     private func setUI() {
@@ -49,7 +52,7 @@ class HomePage: UIViewController {
     }
 }
 
-extension HomePage: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HomePage: UICollectionViewDelegate, UICollectionViewDataSource, CellProtocol{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return filmsList.count
     }
@@ -65,6 +68,9 @@ extension HomePage: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.layer.borderWidth = 0.3
         cell.layer.cornerRadius = 10.0
+        
+        cell.cellProtocol = self
+        cell.indexPath = indexPath
         
         
         return cell
@@ -83,5 +89,11 @@ extension HomePage: UICollectionViewDelegate, UICollectionViewDataSource {
             }
         }
     }
+    
+    func addToBasketClicked(indexPath: IndexPath) {
+        let film = filmsList[indexPath.row]
+        print("\(film.name!) added to basket!")
+    }
+    
 }
 
