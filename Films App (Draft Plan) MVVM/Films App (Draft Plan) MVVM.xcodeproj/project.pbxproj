@@ -16,6 +16,13 @@
 		DCA233122AE9E9B3000EAF2F /* Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA233112AE9E9B3000EAF2F /* Films.swift */; };
 		DCA233152AE9E9E8000EAF2F /* FilmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA233142AE9E9E8000EAF2F /* FilmCell.swift */; };
 		DCA233172AE9E9F8000EAF2F /* DetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA233162AE9E9F8000EAF2F /* DetailPage.swift */; };
+		DCA2331B2AE9F739000EAF2F /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = DCA2331A2AE9F739000EAF2F /* RxBlocking */; };
+		DCA2331D2AE9F739000EAF2F /* RxBlocking-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DCA2331C2AE9F739000EAF2F /* RxBlocking-Dynamic */; };
+		DCA2331F2AE9F739000EAF2F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DCA2331E2AE9F739000EAF2F /* RxCocoa */; };
+		DCA233212AE9F739000EAF2F /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DCA233202AE9F739000EAF2F /* RxCocoa-Dynamic */; };
+		DCA233232AE9F739000EAF2F /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = DCA233222AE9F739000EAF2F /* RxRelay */; };
+		DCA233252AE9F771000EAF2F /* FilmsDaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA233242AE9F771000EAF2F /* FilmsDaoRepository.swift */; };
+		DCA233282AE9F7D4000EAF2F /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA233272AE9F7D4000EAF2F /* HomePageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +37,8 @@
 		DCA233112AE9E9B3000EAF2F /* Films.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Films.swift; sourceTree = "<group>"; };
 		DCA233142AE9E9E8000EAF2F /* FilmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmCell.swift; sourceTree = "<group>"; };
 		DCA233162AE9E9F8000EAF2F /* DetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPage.swift; sourceTree = "<group>"; };
+		DCA233242AE9F771000EAF2F /* FilmsDaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsDaoRepository.swift; sourceTree = "<group>"; };
+		DCA233272AE9F7D4000EAF2F /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +46,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA233232AE9F739000EAF2F /* RxRelay in Frameworks */,
+				DCA233212AE9F739000EAF2F /* RxCocoa-Dynamic in Frameworks */,
+				DCA2331F2AE9F739000EAF2F /* RxCocoa in Frameworks */,
+				DCA2331B2AE9F739000EAF2F /* RxBlocking in Frameworks */,
+				DCA2331D2AE9F739000EAF2F /* RxBlocking-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +91,8 @@
 		DCA2330C2AE9E986000EAF2F /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				DCA2330E2AE9E991000EAF2F /* TableView */,
+				DCA233262AE9F7CB000EAF2F /* ViewModel */,
+				DCA2330E2AE9E991000EAF2F /* CollectionView */,
 				DCA2330D2AE9E98B000EAF2F /* Views */,
 			);
 			path = UI;
@@ -92,17 +107,18 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		DCA2330E2AE9E991000EAF2F /* TableView */ = {
+		DCA2330E2AE9E991000EAF2F /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
 				DCA233142AE9E9E8000EAF2F /* FilmCell.swift */,
 			);
-			path = TableView;
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		DCA2330F2AE9E99A000EAF2F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				DCA233182AE9F72A000EAF2F /* Repository */,
 				DCA233102AE9E99D000EAF2F /* Entity */,
 			);
 			path = Data;
@@ -114,6 +130,22 @@
 				DCA233112AE9E9B3000EAF2F /* Films.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		DCA233182AE9F72A000EAF2F /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				DCA233242AE9F771000EAF2F /* FilmsDaoRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		DCA233262AE9F7CB000EAF2F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DCA233272AE9F7D4000EAF2F /* HomePageViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +164,13 @@
 			dependencies = (
 			);
 			name = "Films App (Draft Plan) MVVM";
+			packageProductDependencies = (
+				DCA2331A2AE9F739000EAF2F /* RxBlocking */,
+				DCA2331C2AE9F739000EAF2F /* RxBlocking-Dynamic */,
+				DCA2331E2AE9F739000EAF2F /* RxCocoa */,
+				DCA233202AE9F739000EAF2F /* RxCocoa-Dynamic */,
+				DCA233222AE9F739000EAF2F /* RxRelay */,
+			);
 			productName = "Films App (Draft Plan) MVVM";
 			productReference = DCA232F52AE9E948000EAF2F /* Films App (Draft Plan) MVVM.app */;
 			productType = "com.apple.product-type.application";
@@ -160,6 +199,9 @@
 				Base,
 			);
 			mainGroup = DCA232EC2AE9E948000EAF2F;
+			packageReferences = (
+				DCA233192AE9F739000EAF2F /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = DCA232F62AE9E948000EAF2F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -189,7 +231,9 @@
 			files = (
 				DCA232FD2AE9E948000EAF2F /* HomePage.swift in Sources */,
 				DCA233122AE9E9B3000EAF2F /* Films.swift in Sources */,
+				DCA233252AE9F771000EAF2F /* FilmsDaoRepository.swift in Sources */,
 				DCA232F92AE9E948000EAF2F /* AppDelegate.swift in Sources */,
+				DCA233282AE9F7D4000EAF2F /* HomePageViewModel.swift in Sources */,
 				DCA233172AE9E9F8000EAF2F /* DetailPage.swift in Sources */,
 				DCA232FB2AE9E948000EAF2F /* SceneDelegate.swift in Sources */,
 				DCA233152AE9E9E8000EAF2F /* FilmCell.swift in Sources */,
@@ -415,6 +459,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DCA233192AE9F739000EAF2F /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DCA2331A2AE9F739000EAF2F /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCA233192AE9F739000EAF2F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		DCA2331C2AE9F739000EAF2F /* RxBlocking-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCA233192AE9F739000EAF2F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxBlocking-Dynamic";
+		};
+		DCA2331E2AE9F739000EAF2F /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCA233192AE9F739000EAF2F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		DCA233202AE9F739000EAF2F /* RxCocoa-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCA233192AE9F739000EAF2F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxCocoa-Dynamic";
+		};
+		DCA233222AE9F739000EAF2F /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCA233192AE9F739000EAF2F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DCA232ED2AE9E948000EAF2F /* Project object */;
 }
